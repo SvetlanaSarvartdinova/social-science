@@ -69,17 +69,17 @@ class Themes extends React.Component {
         themesToSend.isChosen4 = this.state.checkboxes[keys[3]];
 
         async function getArray() {
-            axios.post('http://socialscience.herokuapp.com/api/themes/', themesToSend);
-            var resp = await axios.get('http://socialscience.herokuapp.com/api/themes/');
+            axios.post('https://socialscience.herokuapp.com/api/themes/', themesToSend);
+            var resp = await axios.get('https://socialscience.herokuapp.com/api/themes/');
             console.log(resp);
             if (id ==1 ) {
-                var response = await fetch("http://socialscience.herokuapp.com/api/firstquiz/?format=json");
+                var response = await fetch("https://socialscience.herokuapp.com/api/firstquiz/?format=json");
             }
             if (id  == 2) {
-                var response = await fetch("http://socialscience.herokuapp.com/api/secondquiz/?format=json");
+                var response = await fetch("https://socialscience.herokuapp.com/api/secondquiz/?format=json");
             }
             if (id  == 3) {
-                var response = await fetch("http://socialscience.herokuapp.com/api/thirdquiz/?format=json");
+                var response = await fetch("https://socialscience.herokuapp.com/api/thirdquiz/?format=json");
             }
             arrayOfQuestions = await response.json();
             return arrayOfQuestions;
