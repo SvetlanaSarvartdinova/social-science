@@ -16,9 +16,9 @@ class Theme(models.Model):
 
 
 class Firquiz(models.Model):
-    topic = models.CharField('Тема', max_length=64, choices=TOPIC_CHOISES)
+    topic = models.CharField('Тема', max_length=100, choices=TOPIC_CHOISES)
     questionText = models.TextField('Вопрос')
-    answerText = models.CharField('Правильный вариант', max_length=64)
+    answerText = models.CharField('Правильный вариант', max_length=100)
 
     def __str__(self):
         return self.questionText
@@ -29,13 +29,13 @@ class Firquiz(models.Model):
 
 
 class Secquiz(models.Model):
-    topic = models.CharField('Тема', max_length=64, choices=TOPIC_CHOISES)
+    topic = models.CharField('Тема', max_length=100, choices=TOPIC_CHOISES)
     questionText = models.TextField('Вопрос')
-    option1 = models.CharField('Вариант 1', max_length=64)
-    option2 = models.CharField('Вариант 2', max_length=64)
-    option3 = models.CharField('Вариант 3', max_length=64)
-    option4 = models.CharField('Вариант 4', max_length=64)
-    answerText = models.CharField('Правильный вариант', max_length=64)
+    option1 = models.CharField('Вариант 1', max_length=100)
+    option2 = models.CharField('Вариант 2', max_length=100)
+    option3 = models.CharField('Вариант 3', max_length=100)
+    option4 = models.CharField('Вариант 4', max_length=100)
+    answerText = models.CharField('Правильный вариант', max_length=100)
 
     def __str__(self):
         return self.questionText
@@ -45,11 +45,11 @@ class Secquiz(models.Model):
         verbose_name_plural = 'Тренажер "Выбери правильный ответ"'
 
 class Thdquiz(models.Model):
-    topic = models.CharField('Тема', max_length=64, choices=TOPIC_CHOISES)
+    topic = models.CharField('Тема', max_length=100, choices=TOPIC_CHOISES)
     questionText = models.TextField('Утверждение')
-    option1 = models.CharField('Вариант 1', max_length=64)
-    option2 = models.CharField('Вариант 2', max_length=64)
-    answerText = models.CharField('Правильный вариант', max_length=64)
+    option1 = models.CharField('Вариант 1', max_length=100)
+    option2 = models.CharField('Вариант 2', max_length=100)
+    answerText = models.CharField('Правильный вариант', max_length=100)
 
     def __str__(self):
         return self.questionText
